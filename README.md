@@ -1,7 +1,9 @@
 SMAccessibilityOverlay
 ======================
 
-Tool for developers to visualize what voiceover users will "see" when using their apps.
+Tool for developers to visualize what voiceover users will "see" when using their apps. It provides a view like this:
+
+![Accessibility Overlay Screen Shot](accessibilityOverlay.png)
 
 
 # How to use it

@@ -51,6 +51,8 @@
     self.overlayWindow.windowLevel = UIWindowLevelStatusBar;
 	self.overlayWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
 	self.overlayWindow.rootViewController = self;
+    CGAffineTransform transform = self.mainWindow.rootViewController.view.transform;
+    self.overlayWindow.rootViewController.view.transform = transform;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self 
                                                                                     action:@selector( didTapRootView )];
@@ -89,12 +91,15 @@
     if ( !excludeElement ) {
         CGRect elementFrame = [view convertRect:view.bounds toView:view.window];
         
-        UILabel *overlayElement = [[UILabel alloc] initWithFrame:elementFrame];
+        UILabel *overlayElement = [[UILabel alloc] init];
         overlayElement.adjustsFontSizeToFitWidth = YES;
         overlayElement.minimumScaleFactor = 0.5;
         overlayElement.backgroundColor = [UIColor redColor];
         overlayElement.textAlignment = NSTextAlignmentCenter;
         overlayElement.text = view.accessibilityLabel;
+        overlayElement.transform = self.overlayWindow.rootViewController.view.transform;
+        overlayElement.frame = elementFrame;
+        
         
         [self.overlayWindow addSubview:overlayElement];
     }

@@ -36,13 +36,17 @@ iOS simulator doesn't actually turn on accessibility unless you have the Accessi
 
 # Known issues
 
-* Landscape mode is wonky
+* None Currently
 
 # Planned Features
 
 * Make accessibilityHints, traits visible as well
 
 # Revision History
+
+## v0.2.1: February 5, 2013
+
+* Got landscape mode un-FUBARed
 
 ## v0.2: February 4, 2013
 

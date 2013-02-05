@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "SMAppDelegate.h"
+#import "SMAccessibilityOverlayApplication.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SMAppDelegate class]));
+        return UIApplicationMain(argc, argv, NSStringFromClass([SMAccessibilityOverlayApplication class]), NSStringFromClass([SMAppDelegate class]));
     }
 }

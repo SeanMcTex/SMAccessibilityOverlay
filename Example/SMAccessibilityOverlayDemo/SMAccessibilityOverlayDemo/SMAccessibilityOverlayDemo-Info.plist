@@ -30,6 +30,7 @@
 	<string>MainStoryboard_iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>accelerometer</string>
 		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>

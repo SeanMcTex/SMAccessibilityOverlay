@@ -10,7 +10,21 @@
 
 @interface SMAccessibilityOverlay : UIViewController
 
+/**
+ Convenience method to get an initialized new instance of SMAccessibilityOverlay
+ */
++(SMAccessibilityOverlay*)accessibilityOverlay;
+
+/**
+ Analyze the current key window, and display an overlay showing the accessibility
+ properties of its subviews.
+ */
 -(void)show;
+ 
+/**
+ Analyze the specified window, and display an overlay showing the accessibility
+ properties of its subviews.
+ */ 
 -(void)showWithWindow:(UIWindow*)view;
 
 @end

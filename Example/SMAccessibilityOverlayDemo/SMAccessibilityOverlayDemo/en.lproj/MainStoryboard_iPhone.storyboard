@@ -50,14 +50,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000000000000004" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lvS-PR-w2H">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="Lkb-uD-jE8"/>
-                                </constraints>
+                                <accessibility key="accessibilityConfiguration" label="Degree of AI Sentience"/>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI Sentience:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwR-ZO-LJX">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9EV-0i-f30"/>
-                                    <constraint firstAttribute="width" constant="159" id="Fzy-cS-Or9"/>
+                                    <constraint firstAttribute="width" constant="100" id="Y8z-yM-3p2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -65,7 +63,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Artificial Tuna Smell:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kf-7h-8MW">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="Sad-tO-Hdj"/>
+                                    <constraint firstAttribute="width" constant="161" id="LEx-wL-trH"/>
                                     <constraint firstAttribute="height" constant="21" id="acz-bT-R6h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -88,9 +86,9 @@
                             <constraint firstAttribute="trailing" secondItem="Luw-Lf-wuX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EfB-Y7-ydM"/>
                             <constraint firstItem="PFH-CR-ZRt" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Gfd-1D-CPE"/>
                             <constraint firstItem="rwR-ZO-LJX" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HQb-pt-bqu"/>
-                            <constraint firstAttribute="trailing" secondItem="rbk-a8-oU4" secondAttribute="trailing" constant="54" id="Jvm-yG-bag"/>
                             <constraint firstItem="2Kf-7h-8MW" firstAttribute="centerY" secondItem="rbk-a8-oU4" secondAttribute="centerY" type="default" id="QRb-1e-fqa"/>
                             <constraint firstItem="lvS-PR-w2H" firstAttribute="top" secondItem="AKz-kA-faV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="T2h-c7-y9h"/>
+                            <constraint firstItem="rbk-a8-oU4" firstAttribute="leading" secondItem="2Kf-7h-8MW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YPk-FK-blc"/>
                             <constraint firstAttribute="trailing" secondItem="AKz-kA-faV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cuO-Wg-CRR"/>
                             <constraint firstItem="rwR-ZO-LJX" firstAttribute="top" secondItem="AKz-kA-faV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="d1q-Qa-XVi"/>
                             <constraint firstItem="Lxb-TY-ION" firstAttribute="bottom" secondItem="2Kf-7h-8MW" secondAttribute="bottom" type="default" id="eO0-OC-Qv2"/>
@@ -98,6 +96,7 @@
                             <constraint firstItem="sNv-h9-ROs" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="feM-Va-bvG"/>
                             <constraint firstItem="Luw-Lf-wuX" firstAttribute="top" secondItem="PFH-CR-ZRt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lHE-GV-wTZ"/>
                             <constraint firstItem="AKz-kA-faV" firstAttribute="top" secondItem="Luw-Lf-wuX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mjW-Vn-xeV"/>
+                            <constraint firstItem="lvS-PR-w2H" firstAttribute="leading" secondItem="rwR-ZO-LJX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="neY-Pi-vhl"/>
                             <constraint firstAttribute="trailing" secondItem="sNv-h9-ROs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oUO-Kf-BuW"/>
                             <constraint firstItem="Luw-Lf-wuX" firstAttribute="top" secondItem="3" secondAttribute="top" constant="155" id="pjy-we-3YI"/>
                             <constraint firstAttribute="bottom" secondItem="V9w-4G-eA9" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rBq-Dl-pFh"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2108B4EA16C07DAF000638B3 /* SMAccessibilityOverlayApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2108B4E916C07DAF000638B3 /* SMAccessibilityOverlayApplication.m */; };
 		217042F416BD69B3005693DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217042F316BD69B3005693DF /* UIKit.framework */; };
 		217042F616BD69B3005693DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217042F516BD69B3005693DF /* Foundation.framework */; };
 		217042F816BD69B3005693DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217042F716BD69B3005693DF /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2108B4E816C07DAF000638B3 /* SMAccessibilityOverlayApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAccessibilityOverlayApplication.h; sourceTree = "<group>"; };
+		2108B4E916C07DAF000638B3 /* SMAccessibilityOverlayApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAccessibilityOverlayApplication.m; sourceTree = "<group>"; };
 		217042F016BD69B3005693DF /* SMAccessibilityOverlayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMAccessibilityOverlayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217042F316BD69B3005693DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		217042F516BD69B3005693DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,8 @@
 				2170430E16BD69B4005693DF /* MainStoryboard_iPad.storyboard */,
 				2170431116BD69B4005693DF /* SMViewController.h */,
 				2170431216BD69B4005693DF /* SMViewController.m */,
+				2108B4E816C07DAF000638B3 /* SMAccessibilityOverlayApplication.h */,
+				2108B4E916C07DAF000638B3 /* SMAccessibilityOverlayApplication.m */,
 				217042FA16BD69B3005693DF /* Supporting Files */,
 			);
 			path = SMAccessibilityOverlayDemo;
@@ -187,6 +192,7 @@
 				2170430416BD69B3005693DF /* SMAppDelegate.m in Sources */,
 				2170431316BD69B4005693DF /* SMViewController.m in Sources */,
 				2170431B16BD69CE005693DF /* SMAccessibilityOverlay.m in Sources */,
+				2108B4EA16C07DAF000638B3 /* SMAccessibilityOverlayApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +325,7 @@
 				2170431816BD69B4005693DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

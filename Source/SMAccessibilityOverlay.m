@@ -18,6 +18,10 @@
 
 # pragma mark - Public Methods
 
++(SMAccessibilityOverlay*)accessibilityOverlay {
+    return [[SMAccessibilityOverlay alloc] init];
+}
+
 -(void)show {
     [self showWithWindow:nil];
 }
@@ -40,7 +44,7 @@
     self.overlayWindow = nil;
 }
 
-# pragma mark - Private Methods
+# pragma mark - Overlay Methods
 
 -(void)configureOverlayWindow {
     self.overlayWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -57,20 +61,22 @@
     self.viewsToProcess = [NSMutableArray array];
     [self.viewsToProcess addObject:self.mainWindow.rootViewController.view];
     
-    UIView *blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-    blueView.backgroundColor = [UIColor blueColor];
-    [self.overlayWindow addSubview:blueView];
-    
+    NSUInteger *accessibilityItemsFound = 0;
     while ( [self.viewsToProcess count] > 0 ) {
         UIView *currentView = [self.viewsToProcess objectAtIndex:0];
         
         if ( currentView.isAccessibilityElement ) {
             [self processAccessibilityElement:currentView];
+            accessibilityItemsFound++;
         }
         
         [self.viewsToProcess addObjectsFromArray:currentView.subviews];
         
         [self.viewsToProcess removeObject:currentView];
+    }
+    
+    if ( accessibilityItemsFound == 0 ) {
+        [self addWarningLabel];
     }
     
 }
@@ -92,6 +98,16 @@
         
         [self.overlayWindow addSubview:overlayElement];
     }
+}
+
+-(void)addWarningLabel {
+    UILabel *warningLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.overlayWindow.frame, 10, 10)];
+    warningLabel.numberOfLines = 0;
+    warningLabel.textAlignment = NSTextAlignmentCenter;
+    warningLabel.text = @"No accessibility items found.\n\n(If you're running in the simulator, be sure to turn on the Accessibility Inspector.)";
+    warningLabel.backgroundColor = [UIColor clearColor];
+    warningLabel.textColor = [UIColor whiteColor];
+    [self.overlayWindow addSubview:warningLabel];
 }
 
 

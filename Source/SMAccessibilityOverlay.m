@@ -30,10 +30,12 @@
     
     self.mainWindow = window ? window : [[UIApplication sharedApplication] keyWindow];
     
-    [self configureOverlayWindow];
-    [self populateOverlayWindow];
-    [self.overlayWindow makeKeyAndVisible];
-
+    BOOL windowIsAccessibilityOverlay = [self.mainWindow.rootViewController isKindOfClass:[SMAccessibilityOverlay class]];
+    if ( !windowIsAccessibilityOverlay ) {
+        [self configureOverlayWindow];
+        [self populateOverlayWindow];
+        [self.overlayWindow makeKeyAndVisible];
+    }
 }
 
 # pragma mark - UI Event Handlers

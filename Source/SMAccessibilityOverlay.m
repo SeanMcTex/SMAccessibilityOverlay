@@ -57,13 +57,16 @@
     self.overlayWindow.rootViewController.view.transform = transform;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self 
-                                                                                    action:@selector( didTapRootView )];
+                                                                                    action:@selector(didTapRootView)];
     [self.view addGestureRecognizer:tapRecognizer];
 }
 
 -(void)populateOverlayWindow {
     self.viewsToProcess = [NSMutableArray array];
-    [self.viewsToProcess addObject:self.mainWindow.rootViewController.view];
+    UIViewController *rootViewController = self.mainWindow.rootViewController;
+    if ( rootViewController != nil ) {
+        [self.viewsToProcess addObject:rootViewController.view];
+    }
     
     NSUInteger *accessibilityItemsFound = 0;
     while ( [self.viewsToProcess count] > 0 ) {
@@ -95,13 +98,16 @@
         
         UILabel *overlayElement = [[UILabel alloc] init];
         overlayElement.adjustsFontSizeToFitWidth = YES;
-        overlayElement.minimumScaleFactor = 0.5;
         overlayElement.backgroundColor = [UIColor redColor];
         overlayElement.textAlignment = NSTextAlignmentCenter;
         overlayElement.text = view.accessibilityLabel;
         overlayElement.transform = self.overlayWindow.rootViewController.view.transform;
         overlayElement.frame = elementFrame;
         
+        // iOS 5 doesn't support this
+        if ( [overlayElement respondsToSelector:@selector(setMinimumScaleFactor:)]) {
+            overlayElement.minimumScaleFactor = 0.5;
+        }
         
         [self.overlayWindow addSubview:overlayElement];
     }

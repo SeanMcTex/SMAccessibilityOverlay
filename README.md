@@ -46,6 +46,10 @@ iOS simulator doesn't actually turn on accessibility unless you have the Accessi
 
 # Revision History
 
+## v0.2.2: May 21, 2013
+
+* Added CocoaPods support
+
 ## v0.2.1: February 5, 2013
 
 * Got landscape mode un-FUBARed

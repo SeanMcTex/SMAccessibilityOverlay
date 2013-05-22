@@ -40,7 +40,9 @@ iOS simulator doesn't actually turn on accessibility unless you have the Accessi
 
 # Planned Features
 
-* Make accessibilityHints, traits visible as well
+* Make accessibilityHints, traits, values visible as well.
+* Handle occlusion properly.
+* Display accessible objects defined with UIAccessibilityContainer/UIAccessibilityElement instead of using UIViews.
 
 # Revision History
 
